@@ -1,0 +1,112 @@
+.body {
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    text-align: center;
+   }
+
+  
+.button
+{
+    background-color: #5e4caf;
+        border-radius: 8px;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        box-shadow: 0 9px #999;
+        width: 150px;
+        height: 50px;
+}
+
+.button1 {
+    background-color: rgb(135, 20, 180); 
+    color: white; 
+    border: 2px solid #6f4caf;
+    text-align: center;
+  }
+  
+.button1:hover {
+    background-color: #371353;
+    padding-bottom: 25px;
+    color: rgb(255,255,255);
+  }
+
+.button1:active {
+    background-color: #371353;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+.line 
+  {
+      display:block; 
+      width: 50%; 
+      color:white;
+      background-color: rgb(135, 20, 180);
+      border:3px solid #6f4caf; 
+      border-radius: 8px;
+      margin-top:25px; 
+      text-align:center;
+      font-size: 15px;
+      position:relative;
+      margin: auto;
+      padding: 10px;
+  }
+
+  
+.button2 
+{
+    background-color: rgb(135, 20, 180);
+        border-radius: 8px;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        box-shadow: 0 9px #999;
+        width: 100px;
+        height: 35px;
+  }
+
+.button2:hover {
+    background-color: #371353;
+    padding-bottom: 25px;
+    color: rgb(255,255,255);
+  }
+
+.button2:active {
+    background-color: #371353;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+.h1 {
+    color: white;
+    font-size: 15px;
+    width: 60%;
+    border-radius: 8px;
+    margin: auto;
+    padding: 10px;
+    background-color: #5e4caf;
+    text-align: center;
+    }
