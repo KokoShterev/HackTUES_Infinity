@@ -110,3 +110,10 @@
     background-color: #5e4caf;
     text-align: center;
     }
+
+.logo img
+{
+  float: left;
+  width: 150px;
+  height: 150px;
+}
