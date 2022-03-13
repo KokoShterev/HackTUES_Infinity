@@ -3,6 +3,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QApplication, QWidget, QInputDialog, QLineEdit, QFileDialog
 from PyQt5.QtGui import QIcon
 
+import wikipedia
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -425,6 +427,12 @@ class Ui_MainWindow(object):
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.gridLayout.addWidget(self.label, 1, 0, 1, 1)
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButton.sizePolicy().hasHeightForWidth())
+        self.pushButton.setSizePolicy(sizePolicy)
+        self.pushButton.setMaximumSize(QtCore.QSize(16777215, 100))
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(26, 0, 40))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -576,7 +584,9 @@ class Ui_MainWindow(object):
         font.setPointSize(24)
         font.setBold(True)
         font.setWeight(75)
+        #self.pushButton.setFont(QFont('Britannic Bold', 15))
         self.pushButton.setFont(font)
+        #self.pushButton.setFont(font("Britannic Bold", 15))
         self.pushButton.setAccessibleDescription("")
         self.pushButton.setAutoFillBackground(False)
         self.pushButton.setStyleSheet("background-color: purple;\n"
@@ -760,9 +770,17 @@ class Ui_MainWindow(object):
         self.open_box()
 
     def open_box(self):
+      _translate = QtCore.QCoreApplication.translate
       filename = QFileDialog.getOpenFileName()
       path = filename[0]
       self.label_2.setPixmap(QtGui.QPixmap(str(path)))
+      st = "cigar shaped galaxy"
+      st = st[0].upper() + st[1:]
+      info = wikipedia.summary(st, 5)
+      st = st + "\n" + "\n" + info
+      #print(st)
+      #st = st + "\n" + "\n" + info"
+      #self.label_3.setText(_translate("MainWindow", st))
     
 if __name__ == "__main__":
     import sys
